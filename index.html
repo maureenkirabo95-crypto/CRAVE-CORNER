@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crave Corner | Burgers, Pizza & More</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">🍔 Crave Corner</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#delivery">Delivery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('burger.jpg')"></div>
+            <div class="slide" style="background-image: url('pizza.jpg')"></div>
+            <div class="slide" style="background-image: url('grilled-chicken.jpg')"></div>
+            <div class="slide" style="background-image: url('tacos.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Crave it. Order it. Love it 🔥</h1>
+            <p>Burgers, Pizzas, Wings & More — Delivered Hot To Your Door!!</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary">View Menu 🍕</a>
+                <a href="#contact" class="btn-secondary">Order Now 🚀</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="menu-container">
+            <h2>Our Menu</h2>
+            <p class="section-subtitle">Fresh, Hot & Delicious — Just For You!!</p>
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="showCategory('burgers', event)">🍔 Burgers</button>
+                <button class="tab-btn" onclick="showCategory('pizza', event)">🍕 Pizza</button>
+                <button class="tab-btn" onclick="showCategory('chicken', event)">🍗 Chicken</button>
+                <button class="tab-btn" onclick="showCategory('steaks', event)">🥩 Steaks</button>
+                <button class="tab-btn" onclick="showCategory('goat', event)">🐐 Goat</button>
+                <button class="tab-btn" onclick="showCategory('sides', event)">🍟 Sides</button>
+                <button class="tab-btn" onclick="showCategory('drinks', event)">🥤 Drinks</button>
+            </div>
+
+            <div id="burgers" class="menu-category active">
+                <div class="food-card">
+                    <img src="burger.jpg" alt="Classic Beef Burger">
+                    <h3>Classic Beef Burger</h3>
+                    <p>Juicy beef patty with fresh lettuce, tomato and special sauce</p>
+                    <span class="price">UGX 25,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="chicken-burger.jpg" alt="Spicy Chicken Burger">
+                    <h3>Spicy Chicken Burger</h3>
+                    <p>Crispy chicken fillet with spicy sauce and coleslaw</p>
+                    <span class="price">UGX 22,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="smash-burger.jpg" alt="Double Smash Burger">
+                    <h3>Double Smash Burger</h3>
+                    <p>Two smashed beef patties with melted cheese and pickles</p>
+                    <span class="price">UGX 35,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="bbq-burger.jpg" alt="BBQ Burger">
+                    <h3>BBQ Bacon Burger</h3>
+                    <p>Beef patty with smoky BBQ sauce and crispy bacon</p>
+                    <span class="price">UGX 30,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="pizza" class="menu-category">
+                <div class="food-card">
+                    <img src="pepperoni.jpg" alt="Pepperoni Pizza">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Classic pepperoni with mozzarella cheese and tomato sauce</p>
+                    <span class="price">UGX 40,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="bbq-pizza.jpg" alt="BBQ Chicken Pizza">
+                    <h3>BBQ Chicken Pizza</h3>
+                    <p>Smoky BBQ sauce with grilled chicken and red onions</p>
+                    <span class="price">UGX 45,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="margherita.jpg" alt="Margherita Pizza">
+                    <h3>Margherita Pizza</h3>
+                    <p>Fresh tomato sauce with mozzarella and basil leaves</p>
+                    <span class="price">UGX 35,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="pizza.jpg" alt="Meat Lovers Pizza">
+                    <h3>Meat Lovers Pizza</h3>
+                    <p>Loaded with beef, chicken and sausage toppings</p>
+                    <span class="price">UGX 50,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="chicken" class="menu-category">
+                <div class="food-card">
+                    <img src="wings.jpg" alt="Crispy Wings">
+                    <h3>Crispy Chicken Wings</h3>
+                    <p>6 pieces of crispy wings served with ranch dipping sauce</p>
+                    <span class="price">UGX 20,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="honey-wings.jpg" alt="Honey Garlic Wings">
+                    <h3>Honey Garlic Wings</h3>
+                    <p>Crispy wings glazed with sweet honey garlic sauce</p>
+                    <span class="price">UGX 22,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="peri-peri.jpg" alt="Peri Peri Wings">
+                    <h3>Peri Peri Wings</h3>
+                    <p>Spicy peri peri marinated wings flame grilled to perfection</p>
+                    <span class="price">UGX 22,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="chicken-strips.jpg" alt="Chicken Strips">
+                    <h3>Chicken Strips</h3>
+                    <p>Crispy golden chicken strips with honey mustard dip</p>
+                    <span class="price">UGX 18,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="grilled-chicken.jpg" alt="Grilled Chicken">
+                    <h3>Grilled Chicken Platter</h3>
+                    <p>Full grilled chicken with fries and coleslaw</p>
+                    <span class="price">UGX 35,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="drumsticks.jpg" alt="Drum Sticks">
+                    <h3>Crispy Drumsticks</h3>
+                    <p>4 pieces of seasoned crispy drumsticks with BBQ sauce</p>
+                    <span class="price">UGX 18,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="steaks" class="menu-category">
+                <div class="food-card">
+                    <img src="ribeye.jpg" alt="Ribeye Steak">
+                    <h3>Ribeye Steak</h3>
+                    <p>Juicy ribeye steak with garlic butter and grilled vegetables</p>
+                    <span class="price">UGX 65,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="sirloin.jpg" alt="Sirloin Steak">
+                    <h3>Sirloin Steak</h3>
+                    <p>Tender sirloin steak with creamy pepper sauce and fries</p>
+                    <span class="price">UGX 60,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="tbone.jpg" alt="T-Bone Steak">
+                    <h3>T-Bone Steak</h3>
+                    <p>Classic T-bone with mushroom sauce and mashed potatoes</p>
+                    <span class="price">UGX 75,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="grilled-steak.jpg" alt="Grilled Steak Platter">
+                    <h3>Grilled Steak Platter</h3>
+                    <p>Grilled steak with chips, coleslaw and grilled tomatoes</p>
+                    <span class="price">UGX 55,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="goat" class="menu-category">
+                <div class="food-card">
+                    <img src="goat-stew.jpg" alt="Goat Stew">
+                    <h3>Goat Stew</h3>
+                    <p>Slow cooked tender goat meat in rich tomato and onion sauce</p>
+                    <span class="price">UGX 35,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="grilled-goat.jpg" alt="Grilled Goat Chops">
+                    <h3>Grilled Goat Chops</h3>
+                    <p>Spiced goat chops flame grilled and served with kachumbali</p>
+                    <span class="price">UGX 40,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="goat-ribs.jpg" alt="Goat Ribs">
+                    <h3>Goat Ribs</h3>
+                    <p>Smoky goat ribs marinated in local spices and grilled slowly</p>
+                    <span class="price">UGX 45,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="grilled-goat.jpg" alt="Goat Platter">
+                    <h3>Goat Platter</h3>
+                    <p>Mixed goat cuts with ugali, kachumbali and roasted vegetables</p>
+                    <span class="price">UGX 55,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="sides" class="menu-category">
+                <div class="food-card">
+                    <img src="loaded-fries.jpg" alt="Loaded Fries">
+                    <h3>Loaded Fries</h3>
+                    <p>Crispy fries topped with cheese sauce and jalapeños</p>
+                    <span class="price">UGX 15,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="onion-rings.jpg" alt="Onion Rings">
+                    <h3>Crispy Onion Rings</h3>
+                    <p>Golden crispy onion rings with smoky dipping sauce</p>
+                    <span class="price">UGX 12,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="nachos.jpg" alt="Loaded Nachos">
+                    <h3>Loaded Nachos</h3>
+                    <p>Crispy nachos with cheese sauce, jalapeños and sour cream</p>
+                    <span class="price">UGX 18,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="tacos.jpg" alt="Beef Tacos">
+                    <h3>Beef Tacos</h3>
+                    <p>3 soft tacos with seasoned beef, salsa and guacamole</p>
+                    <span class="price">UGX 20,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="pasta.jpg" alt="Mac and Cheese">
+                    <h3>Mac and Cheese</h3>
+                    <p>Creamy homestyle mac and cheese with breadcrumb topping</p>
+                    <span class="price">UGX 15,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="sandwich.jpg" alt="Club Sandwich">
+                    <h3>Club Sandwich</h3>
+                    <p>Triple decker sandwich with chicken, bacon and fresh veggies</p>
+                    <span class="price">UGX 18,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="drinks" class="menu-category">
+                <div class="food-card">
+                    <img src="mango.jpg" alt=" Fresh Mango Juice">
+                    <h3>🥭 Fresh Mango Juice</h3>
+                    <p>Freshly blended ripe mango juice — pure and natural</p>
+                    <span class="price">UGX 8,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="strawberry.jpg" alt="Strawberry Smoothie">
+                    <h3>🍓 Strawberry Smoothie</h3>
+                    <p>Creamy strawberry smoothie blended with fresh milk</p>
+                    <span class="price">UGX 10,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="watermelon.jpg" alt="Watermelon Juice">
+                    <h3>🍉 Watermelon Juice</h3>
+                    <p>Fresh cold watermelon juice — refreshing and sweet</p>
+                    <span class="price">UGX 8,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="chocolate.jpg" alt="Chocolate Milkshake">
+                    <h3>🍫 Chocolate Milkshake</h3>
+                    <p>Rich creamy chocolate milkshake with whipped cream</p>
+                    <span class="price">UGX 12,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="vanilla.jpg" alt="Vanilla Milkshake">
+                    <h3>🍦 Vanilla Milkshake</h3>
+                    <p>Classic vanilla milkshake thick and creamy</p>
+                    <span class="price">UGX 12,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="coca.jpg" alt="Coca Cola">
+                    <h3>🥤 Coca Cola</h3>
+                    <p>Ice cold Coca Cola — classic and refreshing</p>
+                    <span class="price">UGX 5,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="passion.jpg" alt="Passion Fruit Juice">
+                    <h3>🍊 Passion Fruit Juice</h3>
+                    <p>Fresh passion fruit juice — tangy and delicious</p>
+                    <span class="price">UGX 8,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="blueberry.jpg" alt="Blueberry Smoothie">
+                    <h3>🫐 Blueberry Smoothie</h3>
+                    <p>Fresh blueberry smoothie packed with antioxidants</p>
+                    <span class="price">UGX 12,000</span>
+                    <button class="cart-btn">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="delivery">
+        <div class="delivery-container">
+            <h2>We Deliver To You!! 🚚</h2>
+            <p class="section-subtitle">Hot, Fresh and Fast — Right To Your Door!!</p>
+            <div class="delivery-steps">
+                <div class="step-card">
+                    <div class="step-icon">📱</div>
+                    <h3>Step 1</h3>
+                    <p>Order online or call us directly</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">👨‍🍳</div>
+                    <h3>Step 2</h3>
+                    <p>We prepare your food fresh</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">🚚</div>
+                    <h3>Step 3</h3>
+                    <p>We deliver hot to your door</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">😋</div>
+                    <h3>Step 4</h3>
+                    <p>Enjoy your delicious meal!!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers">
+        <div class="offers-container">
+            <h2>Special Offers 🔥</h2>
+            <p class="section-subtitle">Hot Deals — Limited Time Only!!</p>
+            <div class="offers-slider">
+                <div class="offer-card active" style="background-image: url('burger.jpg')">
+                    <div class="offer-emoji">🍔</div>
+                    <h3>Buy 2 Get 1 Free</h3>
+                    <p>Order any 2 burgers and get a third one absolutely FREE!!</p>
+                    <span class="offer-tag">BURGERS</span>
+                </div>
+                <div class="offer-card" style="background-image: url('pizza.jpg')">
+                    <div class="offer-emoji">🍕</div>
+                    <h3>Family Pizza Deal</h3>
+                    <p>2 Large Pizzas + 4 Drinks for only UGX 120,000!!</p>
+                    <span class="offer-tag">PIZZA</span>
+                </div>
+                <div class="offer-card" style="background-image: url('wings.jpg')">
+                    <div class="offer-emoji">🍗</div>
+                    <h3>Wings Wednesday</h3>
+                    <p>Every Wednesday — 20 wings for the price of 10!!</p>
+                    <span class="offer-tag">CHICKEN</span>
+                </div>
+                <div class="offer-card" style="background-image: url('ribeye.jpg')">
+                    <div class="offer-emoji">🥩</div>
+                    <h3>Steak Sunday</h3>
+                    <p>Every Sunday — Free fries and drink with any steak order!!</p>
+                    <span class="offer-tag">STEAKS</span>
+                </div>
+            </div>
+            <div class="offer-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="reviews-container">
+            <h2>What Our Customers Say ⭐</h2>
+            <p class="section-subtitle">Real People. Real Food. Real Love!!</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The best burger I've ever had in Kampala!! Crave Corner never disappoints!!"</p>
+                    <h4>— Brian K, Kampala</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Delivery was super fast and the pizza was still hot!! Will definitely order again!!"</p>
+                    <h4>— Sarah M, Ntinda</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The goat chops are absolutely amazing!! Taste just like mama used to make!!"</p>
+                    <h4>— David O, Nakawa</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Best wings in town!! The peri peri flavor is incredible!! 10/10!!"</p>
+                    <h4>— Aisha N, Kololo</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Order Now!! 🚀</h2>
+            <p class="section-subtitle">Place your order and we'll deliver hot to your door!!</p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Find Us 📍</h3>
+                    <p>📍 Ntinda, Kampala, Uganda</p>
+                    <p>📞 +256 700 000 000</p>
+                    <p>📧 info@cravecorner.com</p>
+                    <p>⏰ Open Daily: 9AM — 11PM</p>
+                    <div class="social-links">
+                        <a href="#">📘 Facebook</a>
+                        <a href="#">📸 Instagram</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+                <form class="order-form" id="order-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Your Phone Number" required>
+                    <input type="text" placeholder="Delivery Address" required>
+                    <textarea placeholder="Your Order Details" rows="5" required></textarea>
+                    <button type="submit">Place Order 🚀</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">🍔 Crave Corner</div>
+            <p>© 2026 Crave Corner. All Rights Reserved.</p>
+            <p>Made with ❤️ in Kampala, Uganda 🇺🇬</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
